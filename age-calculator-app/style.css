@@ -28,7 +28,7 @@ body {
 .calculator-container {
     background-color: var(--neutral-white);
     padding: 50px;
-    width: 700px;
+    max-width: 700px;
     border-radius: 16px 16px 5rem 16px;
 }
 
@@ -57,10 +57,6 @@ label {
     color: var(--neutral-smokey-grey);
 }
 
-div.input-field.err {
-    color: var(--primary-light-red);
-}
-
 .warn {
     font-size: 12px;
     color: var(--primary-light-red);
@@ -75,6 +71,15 @@ input {
     border-radius: 8px;
     border: 1px solid var(--neutral-light-grey);
     outline: none;
+    cursor: pointer;
+}
+
+.input-field:hover label {
+    color: var(--primary-purple);
+}
+
+input:hover{
+    border-color: var(--primary-purple);
 }
 
 input:focus {
@@ -93,6 +98,7 @@ button {
     position: relative;
     top: 40px;
     cursor: pointer;
+    transition: background-color .15s ease-in-out;
 }
 
 button:hover {
@@ -108,7 +114,7 @@ button img {
     color: var(--primary-purple);
 }
 
-div#age-result {
+div#age-result, #warning {
     font-size: 2.5rem;
     letter-spacing: -1px;
     font-weight: 800;
@@ -119,16 +125,18 @@ div#age-result > p {
     margin-bottom: -1rem;
 }
 
+.hidden {
+    display: none;
+}
 
 
+.err-text {
+    color: var(--primary-light-red);
+}
 
-
-
-
-
-
-
-
+.err-border {
+    border-color: var(--primary-light-red);
+}
 
 .attribution {
     font-size: 11px;
@@ -137,4 +145,40 @@ div#age-result > p {
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 376px) {
+    :root {
+        font-size: 16px;
+    }
+    .calculator-container {
+        background-color: var(--neutral-white);
+        padding: 2rem;
+        width: 90%;
+        border-radius: 16px 16px 5rem 16px;
+    }
+    input {
+        width: min-content;
+        font-size: 1rem;
+    }
+    .form-control {
+        gap: .5rem;
+    }
+
+    .form-control > * {
+        flex: 1;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+        margin-inline: auto;
+        top: 20px
+    }
+    button img {
+        width: 25px;
+    }
+
+    form {
+        margin-bottom: 2.5rem;
+    }
 }
