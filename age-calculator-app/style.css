@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*::before, *::after, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-purple: hsl(259, 100%, 65%);
+    --primary-light-red: hsl(0, 100%, 67%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --netural-off-white: hsl(0, 0%, 94%);
+    --neutral-light-grey: hsl(0, 0%, 86%);
+    --neutral-smokey-grey: hsl(0, 1%, 44%);
+    --neutral-off-black: hsl(0, 0%, 8%);
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--netural-off-white);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    background-color: var(--neutral-white);
+    padding: 50px;
+    width: 700px;
+    border-radius: 16px 16px 5rem 16px;
+}
+
+form {
+    border-bottom: 1px solid var(--neutral-light-grey);
+    width: 100%;
+}
+
+.form-control {
+    display: flex;
+    gap: 24px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--neutral-smokey-grey);
+}
+
+div.input-field.err {
+    color: var(--primary-light-red);
+}
+
+.warn {
+    font-size: 12px;
+    color: var(--primary-light-red);
+}
+
+input {
+    font-size: .8rem;
+    font-family: inherit;
+    padding: .25rem .5rem;
+    width: 130px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-light-grey);
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-purple);
+}
+
+button {
+    background-color: var(--primary-purple);
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: auto;
+    display: block;
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--neutral-off-black);
+}
+
+button img {
+    display: inline-block;
+    width: 35px;
+}
+
+.result {
+    color: var(--primary-purple);
+}
+
+div#age-result {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+div#age-result > p {
+    margin-bottom: -1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+}
