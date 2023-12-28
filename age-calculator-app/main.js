@@ -1,66 +1,14 @@
 const dayInput = document.querySelector("#day")
 const monthInput = document.querySelector("#month")
 const yearInput = document.querySelector("#year")
-const submitBtn = document.querySelector("button")
+const year = document.querySelector("span#year")
+const month = document.querySelector("span#month")
+const date = document.querySelector("span#date")
 
 const inputStatus = {
-    day: null,
-    month: null,
-    year: null,
-}
-
-function validateInput(e) {
-    const para = document.createElement("p")
-    para.classList.add("warn")
-
-    const targetElement = e.target
-    console.log(targetElement.parentElement)
-    const targetValue = +e.target.value
-    const targetMin = +targetElement.min
-    const targetMax = +targetElement.max
-
-    if (targetElement.nextElementSibling) {
-        targetElement.nextElementSibling.remove()
-    }
-
-    if (targetValue >= targetMin && targetValue <= targetMax) {
-        targetElement.parentElement.children[0].classList.remove("err-text")
-        targetElement.parentElement.children[1].classList.remove("err-border")
-        if (targetElement.id === "day") {
-            inputStatus.day = true;
-        } else if (targetElement.id === "month") {
-            inputStatus.month = true;
-        } else if (targetElement.id === "year") {
-            inputStatus.year = true;
-        }
-    }
-
-    if (targetElement.value === null || targetElement.value === "") {
-        para.textContent = "This field is required"
-        targetElement.parentElement.append(para)
-        targetElement.parentElement.children[0].classList.add("err-text")
-        targetElement.parentElement.children[1].classList.add("err-border")
-    } else if (targetValue < targetMin || targetValue > targetMax) {
-        para.textContent = getErrorMessage(targetElement)
-        targetElement.parentElement.append(para)
-    }
-
-    return false
-}
-
-const inputs = document.querySelectorAll("input")
-// for (const input of inputs) {
-//     input.addEventListener("change", (e) => {
-//         if (e.target.value > e.target.max) {
-//             e.target.value = e.target.max
-//         }
-//     })
-// }
-for (const input of inputs) {
-    input.addEventListener("blur", (e) => {
-        validateInput(e)
-
-    })
+    "day": false,
+    "month": false,
+    "year": false
 }
 
 function getBOD() {
@@ -70,30 +18,60 @@ function getBOD() {
     return `${monthStr}/${dayStr}/${yearStr}`
 }
 
-function getErrorMessage(element) {
-    let message;
-    if (element.id === "day") {
-        message = "Must be a valid day"
-    } else if (element.id === "month") {
-        message = "Must be a valid month"
-    } else if (element.id === "year") {
-        if (element.value < 1970) {
-            message = "Must be in above 1970"
-        } else {
-            message = "Must be in the past"
+document.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("blur", (e) => {
+        validate(e.target)
+        const button = document.querySelector("button")
+        if (inputStatus.day === true && inputStatus.month === true && inputStatus.year === true) {
+            button.disabled = false
+
         }
+    })
+})
+
+function validate(element) {
+    if (element.value === 0 || element.value === null || element.value === "") {
+        element.nextElementSibling.textContent = "This field is required"
+        element.nextElementSibling.classList.add("open")
+        element.style.borderColor = "red"
+        element.parentElement.children[0].style.color = "red"
+        inputStatus[element.id] = false
+    } else if (+element.value < +element.min || +element.value > +element.max) {
+        element.nextElementSibling.classList.add("open")
+        element.nextElementSibling.textContent = getErrorMsg(element)
+        element.style.borderColor = "red"
+        element.parentElement.children[0].style.color = "red"
+        inputStatus[element.id] = false
+    } else {
+        element.nextElementSibling.textContent = "OK"
+        element.nextElementSibling.classList.remove("open")
+        element.style.borderColor = "black"
+        element.parentElement.children[0].style.color = "black"
+        inputStatus[element.id] = true
     }
-    return message
 }
 
+function getErrorMsg(element) {
+    let message;
+    if (element.id === "day") {
+        message = "Must be valid day"
+    } else if (element.id === "month") {
+        message = "Must be valid month"
+    } else if (element.id === "year") {
+        if (+element.value < +element.min) {
+            message = `Must be equal or above ${element.min}`;
+        } else if (+element.value > +element.max) {
+            message = `Must be below ${element.max}`
+        } else {
+            message = `Must be valid year`
+        }
+    }
+    return message;
+}
 
-
-submitBtn.addEventListener("click", (e) => {
-    const result = document.querySelector("#age-result")
-    const warning = document.querySelector("#warning")
-    warning.textContent = `Enter a valid date please`
-    e.preventDefault()
-    if (inputStatus.day && inputStatus.month && inputStatus.year) {
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (inputStatus.day === true && inputStatus.month === true && inputStatus.year === true) {
         const now = new Date();
         const bod = new Date(getBOD())
         const diffTime = Math.abs(now - bod);
@@ -102,17 +80,15 @@ submitBtn.addEventListener("click", (e) => {
         const getMonth = diffDate.getMonth();
         const getDate = diffDate.getDate() - 1;
         console.log(getYear, getMonth, getDate)
-        warning.classList.add("hidden")
-        result.classList.remove("hidden")
-        const year = document.querySelector("span#year")
-        year.innerHTML = getYear
-        const month = document.querySelector("span#month")
-        month.innerHTML = getMonth
-        const date = document.querySelector("span#date")
-        date.innerHTML = getDate
-    } else {
-        warning.classList.remove("hidden")
-        result.classList.add("hidden")
-    }
+        // e.target.nextElementSibling.textContent = "OK"
+        e.target.nextElementSibling.classList.remove("open")
+        e.target.style.borderColor = "black"
+        e.target.parentElement.children[0].style.color = "black"
 
+        year.innerHTML = getYear
+
+        month.innerHTML = getMonth
+
+        date.innerHTML = getDate
+    }
 })

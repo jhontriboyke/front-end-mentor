@@ -46,9 +46,11 @@ form {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 160px;
 }
 
 label {
+    width: 100%;
     display: block;
     text-transform: uppercase;
     font-size: 12px;
@@ -66,7 +68,7 @@ input {
     font-size: .8rem;
     font-family: inherit;
     padding: .25rem .5rem;
-    width: 130px;
+    width: 100%;
     font-weight: bold;
     border-radius: 8px;
     border: 1px solid var(--neutral-light-grey);
@@ -87,7 +89,7 @@ input:focus {
 }
 
 button {
-    background-color: var(--primary-purple);
+    
     border: none;
     outline: none;
     width: 70px;
@@ -97,12 +99,27 @@ button {
     display: block;
     position: relative;
     top: 40px;
-    cursor: pointer;
     transition: background-color .15s ease-in-out;
+    cursor: not-allowed;
 }
 
-button:hover {
-    background-color: var(--neutral-off-black);
+button:disabled {
+    background-color: var(--neutral-smokey-grey);
+}
+
+button:not(:disabled) {
+    background-color: var(--primary-purple);
+}
+
+button:not(:disabled):hover {
+    cursor: pointer;
+    background-color: var(--primary-purple);
+}
+
+button:not(:disabled):active {
+    transform: scale(.97);
+    background-color:hsl(259, 88%, 59%);
+    box-shadow: 0 0 10px hsla(259, 88%, 59%, .5);
 }
 
 button img {
@@ -145,6 +162,20 @@ div#age-result > p {
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.input-field span {
+    display: inline-block;
+    color: red;
+    opacity: 0;
+    height: 15px;
+    font-size: 12px;
+    font-style: italic;
+    max-width: 100%;
+}
+
+input:invalid+span.open {
+    opacity: 1;
 }
 
 @media screen and (max-width: 376px) {
