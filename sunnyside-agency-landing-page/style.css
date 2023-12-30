@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+/* 
+font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif;
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: #25564b;
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100dvh;
+}
+
+header {
+    background: url(./images/mobile/image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100dvh;
+    color: var(--white);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fraunces', serif;
+}
+
+a, button, p {
+    font-family: 'Barlow', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative;
+}
+
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.nav-links {
+    display: block;
+    width: 86%;
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+    text-align: center;
+    position: absolute;
+    bottom: -270px;
+    right: 25px;
+    margin-inline: auto;
+    display: none;
+}
+
+.expand {
+    display: block;
+}
+
+.nav-links::after {
+    content: "";
+    /* width: 20px;
+    height: 20px; */
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid white;
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+
+.nav-links button {
+    padding: 10px 24px;
+    border-radius: 16px;
+    font-family: 'Fraunces', serif;
+    background-color: var(--yellow);
+    color: var(--very-dark-desaturated-blue);
+    font-size: 1rem;
+    border: none;
+    margin-block: 1rem;
+}
+
+.nav-links ul {
+    list-style-type: none;
+}
+
+header .hero-text {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: .25rem;
+    margin-bottom: 5rem;
+}
+
+main {
+    text-align: center;
+}
+
+main img {
+    width: 100%;
+    display: block;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section > * {
+    flex: 1;
+    min-height: 5rem;
+}
+
+.section-text {
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    min-height: 25em;
+}
+
+.section-text h2 {
+    font-size: 2rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.section-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-grayish-blue);
+}
+
+.section-text .learn-more {
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 16px;
+    position: relative;
+}
+
+.section-text .learn-more::after {
+    opacity: .5;
+    content: "";
+    width: 110%;
+    height: 8px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -2px;
+    left: -8px;
+    background-color: hsl(0, 0%, 2%);
+}
+
+#brand .learn-more::after {
+    background-color: var(--yellow)
+}
+
+#stand-out .learn-more::after {
+    background-color: var(--soft-red)
+}
+
+.service-section {
+    height: 33em;
+    position: relative;
+}
+
+#graphic-design {
+    background: url(./images/mobile/image-graphic-design.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--dark-desaturated-cyan);
+}
+
+#photography {
+    background: url(./images/mobile/image-photography.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--dark-blue);
+}
+
+.service-text {
+    position: absolute;
+    top: 63%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-text p {
+    font-size: 16px;
+}
+
+#testimonial h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+}
+
+.user-image {
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-inline: auto;
+}
+
+.user-testimonial p{
+    color: var(--very-dark-grayish-blue);
+}
+
+.user-name {
+    font-size: 1rem;
+}
+
+.user-job {
+    color: var(--grayish-blue);
+    font-size: 14px;
+}
+
+#testimonial section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+}
+
+#testimonial {
+    padding-block: 2rem;
+}
+
+#showcase {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px;
+}
+
+
+
+#showcase div:nth-child(1) {
+    background: url(./images/mobile/image-gallery-milkbottles.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#showcase div:nth-child(2) {
+    background: url(./images/mobile/image-gallery-orange.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#showcase div:nth-child(3) {
+    background: url(./images/mobile/image-gallery-cone.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#showcase div:nth-child(4) {
+    background: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: var(--dark-moderate-cyan);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+footer img, footer .social-links {
+    color: var(--dark-desaturated-cyan);
+}
+
+footer .links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.links li a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--dark-desaturated-cyan);
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+@media screen and (min-width: 768px) {
+    header {
+        background: url(./images/desktop/image-header.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav {
+        padding: 2rem;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        margin: 0px;
+        color: var(--white);
+    }
+
+    .nav-links::after {
+        display: none;
+    }
+
+    .nav-links ul {
+        display: flex;
+    }
+
+    .nav-links button {
+        background-color: var(--white);
+        cursor: pointer;
+    }
+
+    .nav-links button:hover {
+        background-color: var(--yellow);
+    }
+
+    .about-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #brand .section-text {
+        order: -1;
+    }
+
+    #testimonial {
+        padding: 8rem 5rem;
+    }
+
+    #testimonial h2 {
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #testimonial section {
+        justify-content: space-between;
+    }
+
+    #showcase {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 400px;
+        grid-template-rows: none;
+    }
+
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #graphic-design {
+        background: url(./images/desktop/image-graphic-design.jpg);
+    }
+
+    #photography {
+        background: url(./images/desktop/image-photography.jpg);
+    }
+}
