@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Profile card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Kumbh Sans', sans-serif;
+        --dark-cyan: #19a2ae;
+        --very-dark-desaturated-blue: #2d3248;
+        --dark-grayish-blue: hsl(227, 10%, 46%);
+        --dark-gray: #969696;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="bg-[#19a2ae] min-h-screen grid place-items-center">
+      <img class="absolute top-[-200px] left-[-50%] md:left-[-25%]  md:top-[-600px]" src="./images/bg-pattern-top.svg" alt="#">
+      <img class="absolute bottom-[-200px] right-[-50%] md:right-[-25%] md:bottom-[-600px]" src="./images/bg-pattern-bottom.svg" alt="#">
+
+      <div class="w-11/12 md:w-3/12 bg-white rounded-[10px] bg-[url('images/bg-pattern-card.svg')] bg-top bg-no-repeat md:bg-contain relative z-10">
+        <img class="mt-[80px] mx-auto rounded-full border-4 border-white" src="./images/image-victor.jpg" alt="image-victor " />
+        <div class="text-center py-7 border-b">
+          <p class="text-[#2d3248] font-bold text-[20px]">Victor Crest <span class="text-[#969696] ml-1">26</span></p>
+          <p class="text-[#969696]">London</p>
+        </div>
+        <div class="flex justify-between text-center py-5 px-11">
+          <div class="flex flex-col">
+            <span class="font-bold text-[20px] text-[#2d3248]">80K</span>
+            <span class="text-xs text-[#2d3248] tracking-wider">Followers</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-[20px] text-[#2d3248]">803K</span>
+            <span class="text-xs text-[#2d3248] tracking-wider">Likes</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-[20px] text-[#2d3248]">1.4K</span>
+            <span class="text-xs text-[#2d3248] tracking-wider">Photos</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+
+</html>
