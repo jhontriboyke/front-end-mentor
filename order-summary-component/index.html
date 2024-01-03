@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Order summary card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Red Hat Display', sans-serif;
+        --pale-blue: #e0e8ff;
+        --bright-blue: #3829e0;
+        --very-pale-blue: #f5f7ff;
+        --desaturated-blue: #7280a7;
+        --dark-blue: #1f2f56;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <main class="min-h-screen grid place-items-center bg-[#e0e8ff] bg-[url('/images/pattern-background-mobile.svg')] bg-no-repeat bg-contain md:bg-[url('/images/pattern-background-desktop.svg')]">
+
+      <div class="w-11/12 bg-white rounded-[16px] overflow-hidden md:w-6/12 lg:w-4/12 xl:w-3/12">
+        <div class="h-[180px] bg-[url('/images/illustration-hero.svg')] bg-center bg-cover"></div>
+        <div class="text-center p-7">
+          <h1 class="font-extrabold text-[24px] text-[#1f2f56]">Order Summary</h1>
+          <p class="my-4 text-[#7280a7]">
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </p>
+          <div class="flex items-center gap-5 p-3 bg-[#f5f7ff] mb-8">
+            <img src="./images/icon-music.svg" alt="">
+            <div class="flex flex-col">
+              <span class="font-extrabold text-[#1f2f56]">Annual Plan</span>
+              <span class="text-[#7280a7]">$59.99/year</span>
+            </div>
+            <a href="#" class="ml-auto text-[#3829e0] hover:text-[#3829e0]/80 font-bold underline text-[14px] ease-in duration-150 ">Change</a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <button class="shadow-lg shadow-[#1f2f56]/30 hover:shadow-md hover:shadow-[#1f2f56]/35 text-white py-3 bg-[#3829e0] hover:bg-[#3829e0]/80 ease-in duration-150 rounded-lg">Proceed to Payment</button>
+            <button class="py-3 text-[#7280a7] font-extrabold hover:text-[#1f2f56] ease-in duration-150">Cancel Order</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+
+</html>
