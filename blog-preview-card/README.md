@@ -1,16 +1,16 @@
 # Frontend Mentor - Blog preview card solution
 
-Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-- [Author](#author)
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+-   [Author](#author)
 
 ## Overview
 
@@ -18,32 +18,28 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 Users should be able to:
 
-- See hover and focus states for all interactive elements on the page
+-   See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
 ![](./assets/images/screenshot.png)
-![](./assets/images/screenshot(1).png)
-
+![](<./assets/images/screenshot(1).png>)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [Add live site URL here](https://moonlit-basbousa-bfb627.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
+-   Mobile-first workflow
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
+-   Frontend Mentor - [Jhontri Boyke](https://www.frontendmentor.io/profile/jhontriboyke)
+-   Twitter - [@BoykeJhontri](https://www.twitter.com/BoykeJhontri)

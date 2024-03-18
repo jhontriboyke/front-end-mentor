@@ -1,7 +1,24 @@
 ## Front End Mentor
 
+Front end mentor profile - [Jhontri Boyke](https://www.frontendmentor.io/profile/jhontriboyke)
+
 Below all the live demo of my Front End Mentor challenges I have done.
 
-| Challenge Name | Demo |
-| ------ | ------ |
-| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/3-column-preview-card-component-main" target="_blank">3-column preview card component solution</a> | <a href="https://tri-column-preview-jhontriboyke.netlify.app/" target="_blank">Live Site</a> |
+| Challenge Name                                                                                                                                                | Demo                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/3-column-preview-card-component-main" target="_blank">3-column preview card component</a> | <a href="https://tri-column-preview-jhontriboyke.netlify.app/" target="_blank">Live Site</a> |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/advice-generator-app" target="_blank">Advice generator app</a>                            | <a href="https://helpful-kangaroo-ece29c.netlify.app/" target="_blank">Live Site</a>         |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/age-calculator-app" target="_blank">Age calculator</a>                                    | <a href="https://stirring-bienenstitch-449c18.netlify.app/" target="_blank">Live Site</a>    |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/article-preview-component" target="_blank">Article preview component</a>                  | <a href="https://article-preview-jhontriboyke.netlify.app/" target="_blank">Live Site</a>    |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/blog-preview-card" target="_blank">Blog preview card</a>                                  | <a href="https://moonlit-basbousa-bfb627.netlify.app/" target="_blank">Live Site</a>         |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/faq-accordion" target="_blank">FAQ accordion</a>                                          | <a href="https://legendary-faloodeh-e6bc5c.netlify.app/" target="_blank">Live Site</a>       |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/four-card-feature-section" target="_blank">Four card section</a>                          | <a href="https://four-card-section-jhontriboyke.netlify.app/" target="_blank">Live Site</a>  |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/interactive-rating-component" target="_blank">Interactive rating component</a>            | <a href="https://rating-component-jhontriboyke.netlify.app/" target="_blank">Live Site</a>   |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/nft-preview-card-component">NFT preview card component</a>                                | <a href="https://nft-card-jhontriboyke.netlify.app/">Live Site</a>                           |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/order-summary-component">Order summary component</a>                                      | <a href="https://order-summary-jhontriboyke.netlify.app/">Live Site</a>                      |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/product-preview-card-component">Product preview card component</a>                        | <a href="https://jhontriboyke.github.io/fem-product-preview/">Live Site</a>                  |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/profile-card-component">Profile card component</a>                                        | <a href="https://profile-card-jhontriboyke.netlify.app/">Live Site</a>                       |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/qr-code">QR card component</a>                                                            | <a href="https://comfy-panda-af2302.netlify.app/">Live Site</a>                              |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/results-summary-component">Results summary component</a>                                  | <a href="https://result-summary-jhontriboyke.netlify.app/">Live Site</a>                     |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/stats-preview-card">Stats preview card</a>                                                | <a href="https://reliable-pithivier-3f2032.netlify.app/">Live Site</a>                       |
+| <a href="https://github.com/jhontriboyke/front-end-mentor/tree/main/sunnyside-agency-landing-page">Sunnyside agency landing page</a>                          | <a href="https://sunny-side-jhontriboyke.netlify.app/">Live Site</a>                         |

@@ -4,7 +4,9 @@ font-family: 'Barlow', sans-serif;
 font-family: 'Fraunces', serif;
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -38,11 +40,16 @@ header {
     color: var(--white);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Fraunces', serif;
 }
 
-a, button, p {
+a,
+button,
+p {
     font-family: 'Barlow', sans-serif;
 }
 
@@ -87,7 +94,7 @@ nav ul li a {
 }
 
 .nav-links::after {
-    content: "";
+    content: '';
     /* width: 20px;
     height: 20px; */
     border-left: 50px solid transparent;
@@ -121,7 +128,7 @@ header h1 {
     text-transform: uppercase;
     font-size: 2.25rem;
     font-weight: 900;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     margin-bottom: 5rem;
 }
 
@@ -176,8 +183,8 @@ main img {
 }
 
 .section-text .learn-more::after {
-    opacity: .5;
-    content: "";
+    opacity: 0.5;
+    content: '';
     width: 110%;
     height: 8px;
     border-radius: 10px;
@@ -188,11 +195,11 @@ main img {
 }
 
 #brand .learn-more::after {
-    background-color: var(--yellow)
+    background-color: var(--yellow);
 }
 
 #stand-out .learn-more::after {
-    background-color: var(--soft-red)
+    background-color: var(--soft-red);
 }
 
 .service-section {
@@ -237,14 +244,14 @@ main img {
 }
 
 .user-image {
-    width:50px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-inline: auto;
 }
 
-.user-testimonial p{
+.user-testimonial p {
     color: var(--very-dark-grayish-blue);
 }
 
@@ -270,11 +277,9 @@ main img {
 
 #showcase {
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 200px;
 }
-
-
 
 #showcase div:nth-child(1) {
     background: url(./images/mobile/image-gallery-milkbottles.jpg);
@@ -307,7 +312,8 @@ footer {
     padding: 3rem 1rem;
 }
 
-footer img, footer .social-links {
+footer img,
+footer .social-links {
     color: var(--dark-desaturated-cyan);
 }
 
